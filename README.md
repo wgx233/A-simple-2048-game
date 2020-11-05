@@ -1,4 +1,4 @@
-# A-simple-2048-game-by-python
+# A-simple-2048-game
 用python实现了一个简单的带有UI界面的2048小游戏。
 
 这学期选了门计算中心开的python语法课(就是类似大一新生学的那种), 期末作业要求交一个简单的python项目上去。
