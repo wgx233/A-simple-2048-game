@@ -6,7 +6,8 @@ prob = [2] * 9 + [4]  # 使得每次新加的数选中2的概率为9/10, 选中4
 
 class Game:
     def __init__(self):
-        self._grid, self._score = [[0 for i in range(COL)] for j in range(ROW)], 0
+        self._grid = [[0 for i in range(COL)] for j in range(ROW)]
+        self._score = 0
         self.ok = True
         self._grid[randint(0, ROW - 1)][randint(0, COL - 1)] = prob[randint(0, 9)]
         self._grid[randint(0, ROW - 1)][randint(0, COL - 1)] = prob[randint(0, 9)]
@@ -35,7 +36,7 @@ class Game:
             grid[:] = map(list, zip(*grid[::-1]))
         else:
             grid[:] = map(list, zip(*grid))
-            grid = Game.upsideDown(grid)
+            Game.upsideDown(grid)
 
     @staticmethod
     def compress(grid): # 往下压缩格子的空隙
